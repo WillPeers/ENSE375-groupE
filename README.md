@@ -27,3 +27,5 @@ Article 2
 * Will 12.5, 12.6
 
 # For Task 2
+
+git clone https://github.com/WillPeers/ENSE375-groupE.git
