@@ -28,4 +28,16 @@ Article 2
 
 # For Task 2
 
-git clone https://github.com/WillPeers/ENSE375-groupE.git
+* Open a command line
+* Navigate to a part of your computer where you would like to store the repository
+* `git clone https://github.com/WillPeers/ENSE375-groupE.git` to bring the repository to your computer
+* `git pull` This will assure you have the newest version of the repository
+* Use the `cd ENSE375-groupE` command to enter into the repository
+* Create a new `.txt` file
+* Enter your part of the report
+* Save the `.txt`
+* Back to the command line
+* Type in `git add` and then the name of your file
+* Then type `git commit -m ""` and enter some message inside the parenthesis like "Added my section" or something
+* Type `git push`
+* The file should appear in the online repository
