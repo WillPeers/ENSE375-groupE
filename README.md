@@ -12,17 +12,17 @@
 
 Article 1
 
-Dhruv 6.1, 6.2
-Ria 6.3, 6.4
-Philip 6.5, 6.6
-Alish 6.7, 6.8
-Will 6.9, 6.10
+*Dhruv 6.1, 6.2
+*Ria 6.3, 6.4
+*Philip 6.5, 6.6
+*Alish 6.7, 6.8
+*Will 6.9, 6.10
 
 Article 2
 
-Dhruv 12.1
-Ria 12.2 - 12.2.2
-Philip 12.2.3 and 12.2.4
-Alish 12.3 and 12.4
-Will 12.5, 12.6
+*Dhruv 12.1
+*Ria 12.2 - 12.2.2
+*Philip 12.2.3 and 12.2.4
+*Alish 12.3 and 12.4
+*Will 12.5, 12.6
 
