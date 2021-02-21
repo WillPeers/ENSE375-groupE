@@ -41,3 +41,6 @@ Article 2
 * Then type `git commit -m ""` and enter some message inside the parenthesis like "Added my section" or something
 * Type `git push`
 * The file should appear in the online repository
+
+To view `Mermaid` graph: install extensions for firefox from https://addons.mozilla.org/en-US/firefox/addon/github-mermaid/?src=recommended
+                        or for Chrome install extension from https://chrome.google.com/webstore/detail/github-%20-mermaid/goiiopgdnkogdbjmncgedmgpoajilohe?hl=en
