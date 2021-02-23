@@ -1,0 +1,25 @@
+ENSE375 Project
+Introduction to Git - Branching and Merging
+Branch
+Branch will allow us to work in the different versions of a file parallelly. Our work is independent, and we can determine if we want to merge our work into other branches. Separate versions of the same file are functions of the branch. We can branch for different purposes.
+Branch Implementation
+A commit has 40-hexadecimal sha-1 hash. Git will create a master branch by default. A branch is a pointer, and a branch will point to the sha-1 hash. When we are at our master branch every time, we make a commit the branch will move up. Git will know what branch we are at by a pointer called head. Head points to a branch and it is called a symbolic pointer because it only points to a branch.
+Creating Branch	
+We can make a new branch with the command “git branch <name of the branch>”. The Git branch command will show all the branches. The asterisk with the branch will tells us what branch we at for example we are at the master branch, it tells us that “HEAD” is to the master branch. We switch to another branch with the command “git checkout <name of the branch>”. If we are to have any new commit to the branch, we will be at the new commit. If we had a file and we were editing that file for each branch, then the file and the information it contains will be different. We can create a branch and checkout a new branch with the command “git checkout -b dev”.
+Fast Forward Merge 
+We can merge with the command “git merge <branch name>”. If there is a “direct path” we can use the Fast Forward Merge.
+Delete Branches
+Before deleting the branches, we can check what commits we have merged with “git branch –merged”. We can delete a branch with the command “git branch -d <command name>”. If the branch is not merged, Git will warn us before deleting a branch. If we still want to delete a branch that is not been merged, we can with “git branch -D”. 
+3 Way Merge
+When we do not have a direct path, we can merge with 3 Way Merge. For example, if we had three branches, to merge we need to create a new commit called the merge commit. We need to first do a base commit and then do a last commit for each branch.
+Merge Conflict
+Merge conflict will occur when same line on different branches has changed. These branches than merge resulting in a merge conflict. Whenever there is a merge conflict, Git gives us a solution with the command “git merge –abort”. If we do not want to deal with the resolving the conflict this allows us to back out of the merge. We can start the merge with the command “git merge dev”. We can also type command “git status”, this will help us merge, it shows the working directory and the staging area. From here we can edit all the files that cause the conflict. After resolving we can carry forward with our merge commands and other commands.
+Detached Head	
+When the head is pointing to the commit instead of the branch and then a commit it is called a “Detached Head”. If we are to type the command “git log” it will show the command history. Now from here we can take a hash. Now when we type the command “git checkout <commit hash>”, now Git will give us a warning that we are in “Detached Head” state. Now to resolve this we can checkout the same branch again. Let us go back to the “Detached Head” solve this with the command “git branch stage”, this creates a stage branch. Then type in the command “git checkout stage”, this will check out our new branch. We have again resolved the “Detached Head”.
+Git Stash 
+To get to a clean state we can use the “Git Stash”, what “Git Stash” allows you to do is record the working directory and index of the current state and allows you to go to clean state. The command saves your work directory and will allow you to go back to a working directory. We can look at the stashes with the command “git stash list”. We can apply the stashed again at any time with the command “git stash apply” and this will apply the most recent stash. If we want to apply the “Git Stash” and remove it, we can type the command “git stash pop”. If we want to apply the different stash and not the most recent stash, we can apply the command “git stash apply <label name>. If want a to write information about what the stash contains, we can type the command “git stash save <information>”. 
+
+Reference
+https://www.youtube.com/watch?v=FyAAIHHClqI&ab_channel=DavidMahler
+
+ 
