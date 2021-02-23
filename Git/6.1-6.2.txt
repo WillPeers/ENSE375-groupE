@@ -19,3 +19,6 @@ When Git was developed there were also other dVCS. All this tool allows for flex
 
 Reference
 http://aosabook.org/en/git.html
+https://www.atlassian.com/git/tutorials/saving-changes
+https://git-scm.com/docs/git-stash
+
