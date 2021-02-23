@@ -1,0 +1,21 @@
+Git - Susan Potter
+Git allows to sustain work that is [usually code and could be other types of files] done by more than one person. Git is a distributed workflow tool, and it allows for work to converge or diverge. This report will talk about Git and how it is different from its competitors. This report will go into details about the goals behind invention of Git and how the goals are sustained and achieved. The report will elaborate how this DAGs [Directed Acyclic Graphs], Reference Pointer, Object Model Representation, remote protocol, and tree merging. 
+	Git was started in the Linux Kernel in 2005. The Linux Kernel before the Git had high volume of committers. There was also large volume of contributor involvement. The Linux Kernel was managed with tarballs and patches and the development community were looking for a VCS that would be helpful. This gave a rise to Git in 2005.
+Before Git Linux Kernel codebase was managed by two VCSs
+	BitKeeper
+	CVS
+BitKeeper was quite different from the other VCS at that time. BitMover, the creators of BitKeeper decided to end the licenses of Key Linux Kernel Developers. Because of this Linus Torvald began developing the Git. He started with writing scripts to manage email patches. The goal of the scripts was to “abort merges” (Susan Potter, n.d.) instantly. This allowed the “maintainer” to modify the code “mid-path-stream” and do a manual merge. After this there is continuous merge of following patches.
+Torvalds has three goals with Git
+1.	Distributed Workflow 
+2.	Content Corruption Safety
+3.	High Performance
+Even though Git is influenced by BitKeeper, Git is quite different and more powerful with more distributed and local workflows. BitKeeper was not able to do this. Monotone also influenced Git and it was VCS created in 2003.
+Distributed Version Control System [dVCS] allow flexibility with workflow. The advantages of the distributed model are
+	Collaborators can work offline.
+	Collaborators has power to share their work when they think its ready to be shared
+	Collaborators can look at the repository history
+	Managed work can be published to more than one repository
+When Git was developed there were also other dVCS. All this tool allows for flexible workflow and that VCS were not able to do. Some of this tool include Mercurial and SVK [subversion]. Subversion handles server to server synchronization. It can sustain by different developers. In today’s market there are many famous dVCS this includes Git, Fossil, Bazaar, Darcs, Mercurial, and Veracity.
+
+Reference
+http://aosabook.org/en/git.html
