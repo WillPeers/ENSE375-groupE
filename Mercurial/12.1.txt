@@ -51,6 +51,9 @@ There are tools that could help with visualizing the tree ordering. Mercurial of
 
 Reference
 http://aosabook.org/en/mercurial.html
+https://www.atlassian.com/git/tutorials/saving-changes
+https://git-scm.com/docs/git-stash
+
 
 
 
