@@ -1,7 +1,7 @@
 # ENSE375-groupE
-[Video 1 (Introduction to Git - Core Concepts) - Dhruv](https://www.youtube.com/watch?v=uR6G2v_WsRA)  
+[Video 1 (Introduction to Git - Core Concepts) - Ria](https://www.youtube.com/watch?v=uR6G2v_WsRA)  
 
-[Video 2 (Introduction to Git - Branching and Merging) - Ria](https://www.youtube.com/watch?v=FyAAIHHClqI) [For UML check the Non_Text Document Folder]
+[Video 2 (Introduction to Git - Branching and Merging) - Dhruv](https://www.youtube.com/watch?v=FyAAIHHClqI) [For UML check the Non_Text Document Folder]
 
 [Video 3 (Introduction to Git - Remotes) - Philip](https://www.youtube.com/watch?v=Gg4bLk8cGNo)  
 
