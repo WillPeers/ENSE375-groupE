@@ -1,0 +1,61 @@
+Mercurial - DirkJan Ochtman
+This chapter will discuss the Mercurial. Mercurial is a distributed version control system written in python with bits and small amount was return in C for performance. This chapter will discuss the decision related to the design of Mercurial Algorithm and data structures.
+
+12.1. A Short History of Version Control
+Version control systems allow developers to work software system continuously without
+	Passing Full copies of work
+	Tracking File Changes
+One of the main functions of the VCS [Version Control Systems] is pass information/changes to a tree of files. 
+Basic Cycle
+	Get tree of files
+	Work on the changes related to this tree file
+	Publish and allow other to access
+Getting the tree of files is called a checkout. Repository is where we access and publish our work/changes. Working directory is the result of the checkout. Working directory could also be called working tree and working copy. Update occurs when we update a “working copy” (Dirkjan Ochtman, n.d.) with new files from the repository. Sometimes we will have to merge, this is when we combine work/changes of different users into a single life. The “diff” command allows us to check the changes/work of two revisions for a tree and a file. The common mode of the diff command is to observe at the unpublished local changes/work in the working copy. The work/changes can be published by the commit command. The commit command will save the changes/work that are in the working directory to the repository.
+
+12.1.1. Centralized Version Control
+In 1975 the first VCS [Version Control System] was explained and it was called SCCS [Source Code Control System]. SCCS saved deltas to a file and this was more efficient than creating copies. SSCS did not publish these changes. Then came the RCS [Revision Control System] in 1982, this was much better SCCS and it was free. It is still being managed by GNU Project.
+After RCS was the CVS [Concurrent Versioning System], it was release in 1986. CVS were scripts that changed the RCS revisions of the group files. In CVS more than one user can edit the file at the same time. CVS allowed merges after the concurrent edits. There were edit conflicts. The developers were only allowed to commit new version of a file it related to the most recent version in the repository. If there are any edits done in the repository and the users working directory, they will have first resolve the conflict occurring cause of the edit done on the same lines.
+CVS also had branches. This allowed developers to work parallelly and there are also tags that allowed naming for the snapshot that stay the same for referencing. CVS deltas were initially part of the repository on a “shared filesystem” (Dirkjan Ochtman, n.d.). CVS took this out and created a client-server architecture for larger networks, for example the internet.
+A VCS was built in the 2000 by three developers. VCS was called Subversion. Subversion was created for solving larger parts of CVS. Subversion worked on trees, worked on edits in the revision should be.
+	Consistent
+	Atomic
+	Isolated
+	Durable
+Subversion also continues to have the original version of the “checked out” (Dirkjan Ochtman, n.d.) revisions with the working directory. This way comparing the trees to the “checkout-out changeset” is local and it is fast.
+Subversion includes the tags and branches are part of project tree. Subversion project includes
+	Tags
+	Branches
+	Trunk
+This is very instinctive for the user who do not have any experience with VCS. There are problems with the conversion tools because tags and branches are structural in other systems.
+All the Control Systems that were talked about centralized. They can exchange changes. They can use other computers to keep track of the history of the repository. Distributed version control system will do something different; it will keep the copies of all/most of the repository history on computers that have a working directory of that repository.
+
+12.1.2. Distributed Version Control
+Subversion was better than the CVS however there were still improvements needed in the Subversion and this are
+1.	In all the CS [Centralized Systems] committing a changeset and publishing was quite similar because the repository history was centralized in one place. Network was a requirement for committing changes. 
+2.	CS repository entry also requires one or more than one network round trips, and this made the system slow when it is compared distributed systems. 
+3.	Systems mentioned before do not have the ability to track merges. When working in large groups, it becomes important that the version control system can record the changes in a new version. This way the nothing will get lost and the following merges can use this information. 
+4.	The centralization that VCS needs are not realistic and there is single place for uniting/bonding. dVCS is more realistic with better organization and allows the developers to push around and merge changes.
+To solve these 4 points there were tools created. These tools include Git, Mercurial, and Bazaar. Git and Mercurial were started in 2005 by Linux Kernel Developers. Tools can handle large volume of changesets in large volume of files. Matt and Linus both were influenced by the Monotone VCS. Bazaar was different created separately from Git and Mercurial. It also gained popularity at the same time and was adopted by Canonical with their project.
+Distributed Version Control System also have problems, and this are.
+1.	There is no canonical view of the history, centralized system had this.
+2.	Changesets is committed parallelly, this does not allow the non permanent order revision with repository.
+The solution is to use a DAG [Directed Acyclic Graph] of changeset rather than using the linear ordering. What this mean sis that the new commit changeset is the child revision of the base revision. None of the revision can be independent or and cannot depend on the descendant revisions. We have three type of revisions
+	Root Revisions [No parents and repository can have more than one root]
+	Merge Revisions [More than one parent] 
+	Head revisions [This revision has no children]
+Repository will start with a root revision that is empty and this will go towards changesets. Then it will end in one or more of the heads. When any two users commit independently and one of the users decide to pull in the changes from the other user, they will have to explicitly merge the changes of the other into a new revision. This will be followed by a commit that will be a merge revision. 
+DAG will solve problems that are difficult to solve in a cVCS [Centralized Version Control System]. The merge revisions will record the data about the merged branches of the DAG. The graphs could also help wit parallel branches, and merging to a smaller group, and merging into a specific branch that is called a canonical. 
+The DAG needs the system to track old changesets and their relations. To support the exchange of the date of the changeset, the changesets can keep track of the parent changeset. Changeset do need an identifier to do this. Systems can use UUID and if not something like UUID. Git and Mercurial use SHA1 hashes. This also has extra properties that are useful and that is changeset ID can validate changeset contents. Since the parents are also part of the hashed data, the history related to the revisions can be validated using the hash. Timestamps, commit messages, Author names, and other changeset data that describes and give information about the other data is also hashed like the file contents of a new revisions and this can also be validated. Timestamps are reported at commit time, and they also do not carry forward linearly in a repository.
+This could be difficult for people who are user of centralized VCS.  There is no integer to name a revision worldwide, it is a string that contains a 40-character hexadecimal string. Global ordering does is not available. There is local ordering, and that is DAG. If by mistake a user starts a new head of development, and user commits contrary to parent revision that has a child can lead confusion when the user is comfortable with VCS warnings. 
+There are tools that could help with visualizing the tree ordering. Mercurial offers “changeset hash” that explicit and shot version to help with the identification. Mercurial also offers “local-only linear” to help with the identification. An integer that is monotonically climbing, expresses the order of changeset while entering the clone. A clone-to-clone order could different and this why it cannot be used for non-local operation.
+
+Reference
+http://aosabook.org/en/mercurial.html
+
+
+
+
+
+
+
+
