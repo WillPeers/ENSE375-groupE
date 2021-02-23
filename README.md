@@ -1,7 +1,7 @@
 # ENSE375-groupE
 [Video 1 (Introduction to Git - Core Concepts) - Dhruv](https://www.youtube.com/watch?v=uR6G2v_WsRA)  
 
-[Video 2 (Introduction to Git - Branching and Merging) - Ria](https://www.youtube.com/watch?v=FyAAIHHClqI) 
+[Video 2 (Introduction to Git - Branching and Merging) - Ria](https://www.youtube.com/watch?v=FyAAIHHClqI) [For UML check the Non_Text Document Folder]
 
 [Video 3 (Introduction to Git - Remotes) - Philip](https://www.youtube.com/watch?v=Gg4bLk8cGNo)  
 
@@ -12,7 +12,7 @@
 
 Article 1
 
-* Dhruv 6.1, 6.2
+* Dhruv 6.1, 6.2 [For UML check the Non_Text Document Folder]
 * Ria 6.3, 6.4
 * Philip 6.5, 6.6
 * Alish 6.7, 6.8
@@ -20,7 +20,7 @@ Article 1
 
 Article 2
 
-* Dhruv 12.1
+* Dhruv 12.1 [For UML check the Non_Text Document Folder]
 * Ria 12.2 - 12.2.2
 * Philip 12.2.3 and 12.2.4
 * Alish 12.3 and 12.4
