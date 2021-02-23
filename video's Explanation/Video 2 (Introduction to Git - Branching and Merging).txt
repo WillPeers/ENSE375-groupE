@@ -21,5 +21,7 @@ To get to a clean state we can use the “Git Stash”, what “Git Stash” all
 
 Reference
 https://www.youtube.com/watch?v=FyAAIHHClqI&ab_channel=DavidMahler
+https://www.atlassian.com/git/tutorials/saving-changes
+https://git-scm.com/docs/git-stash
 
  
