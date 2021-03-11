@@ -1,5 +1,6 @@
 package com.uregina.app;
 import com.uregina.exception.*;
+
 import java.util.ArrayList;
 
 public class PatientHistogram 
@@ -16,8 +17,10 @@ public class PatientHistogram
 	*/
     	public boolean addAPatientToRegion(int VIndex,int HIndex)
     	{
-			if (this.patientCount[VIndex][HIndex] == 0)
+			if (this.patientCount[VIndex][HIndex] == 0) {
+				this.patientCount[VIndex][HIndex] += 1;
 				return true;
+			}
     		
     		return false;
     	}
@@ -27,8 +30,10 @@ public class PatientHistogram
 	*/
     	public boolean deleteAPatientFromRegion(int VIndex,int HIndex)
     	{
-			if (this.patientCount[VIndex][HIndex] > 0)
+			if (this.patientCount[VIndex][HIndex] != 0) {
+				this.patientCount[VIndex][HIndex] -= 1;
 				return true;
+			}
     		
     		return false;
     	}
