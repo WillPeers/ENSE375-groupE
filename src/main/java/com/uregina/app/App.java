@@ -62,7 +62,6 @@ public class App
 				}
 				break;
 			case 2:
-				String stupid=myInput.nextLine();
 				patientID=myInput.nextLine();
 				if(app.deletePatient(patientID))
 				{
