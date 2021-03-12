@@ -8,7 +8,6 @@ public class PatientHistogram
 	private int[][] patientCount;
     	public PatientHistogram() 
     	{
-			//CHANGE
 			this.patientCount = new int [20][10];
     	}
     	/**
@@ -17,12 +16,17 @@ public class PatientHistogram
 	*/
     	public boolean addAPatientToRegion(int VIndex,int HIndex)
     	{
-			if (this.patientCount[VIndex][HIndex] == 0) {
-				this.patientCount[VIndex][HIndex] += 1;
-				return true;
-			}
-    		
-    		return false;
+    		try{
+				if (this.patientCount[VIndex][HIndex] == 0) {
+					this.patientCount[VIndex][HIndex] += 1;
+					return true;
+				}
+				else 
+					return false;
+    		}
+    		catch(Exception e) {
+    			return false;
+    		}
     	}
 	/**
 	*
@@ -30,15 +34,25 @@ public class PatientHistogram
 	*/
     	public boolean deleteAPatientFromRegion(int VIndex,int HIndex)
     	{
-			if (this.patientCount[VIndex][HIndex] != 0) {
-				this.patientCount[VIndex][HIndex] -= 1;
-				return true;
-			}
-    		
-    		return false;
+    		try {
+				if (this.patientCount[VIndex][HIndex] != 0) {
+					this.patientCount[VIndex][HIndex] -= 1;
+					return true;
+				}
+				else
+					return false;
+    		}
+    		catch(Exception e) {
+    			return false;
+    		}
     	}
     	public int getPatientsCountInRegion(int VIndex,int HIndex) throws IndexOutOfBoundsException
     	{
-    		return this.patientCount[VIndex][HIndex];
+    		try {
+    			return this.patientCount[VIndex][HIndex];
+    		}
+    		catch(Exception e) {
+    			return -1;
+    		}
     	}
 }
