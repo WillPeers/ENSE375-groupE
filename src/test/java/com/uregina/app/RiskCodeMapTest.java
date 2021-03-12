@@ -2,9 +2,13 @@ package com.uregina.app;
 
 import static org.junit.Assert.assertTrue;
 
+import static org.junit.Assert.assertEquals;
+
 import org.junit.Test;
 
 import jdk.jfr.Timestamp;
+import java.util.ArrayList;
+import com.uregina.exception.*;
 
 /**
  * Unit test for RiskCodeMap.
@@ -35,7 +39,7 @@ public class RiskCodeMapTest
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
     	}
         
-        map.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount);
+        map.updateRiskInARegion(VIndex,HIndex,histogram.getPatientsCountInRegion(VIndex, HIndex),neighboursCaseCount);
 
         assertEquals(map.getRiskInARegion(VIndex, HIndex), 'G');
     }
@@ -56,7 +60,7 @@ public class RiskCodeMapTest
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
     	}
         
-        map.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount);
+        map.updateRiskInARegion(VIndex,HIndex,histogram.getPatientsCountInRegion(VIndex, HIndex),neighboursCaseCount);
 
         assertEquals(map.getRiskInARegion(VIndex, HIndex), 'B');
     }
@@ -79,7 +83,7 @@ public class RiskCodeMapTest
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
     	}
         
-        map.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount);
+        map.updateRiskInARegion(VIndex,HIndex,histogram.getPatientsCountInRegion(VIndex, HIndex),neighboursCaseCount);
 
         assertEquals(map.getRiskInARegion(VIndex, HIndex), 'Y');
     }
@@ -102,7 +106,7 @@ public class RiskCodeMapTest
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
     	}
         
-        map.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount);
+        map.updateRiskInARegion(VIndex,HIndex,histogram.getPatientsCountInRegion(VIndex, HIndex),neighboursCaseCount);
 
         assertEquals(map.getRiskInARegion(VIndex, HIndex), 'O');
     }
@@ -125,7 +129,7 @@ public class RiskCodeMapTest
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
     	}
         
-        map.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount);
+        map.updateRiskInARegion(VIndex,HIndex,histogram.getPatientsCountInRegion(VIndex, HIndex),neighboursCaseCount);
 
         assertEquals(map.getRiskInARegion(VIndex, HIndex), 'R');
     }
