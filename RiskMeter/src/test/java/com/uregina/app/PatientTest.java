@@ -16,7 +16,7 @@ public class PatientTest
     public void Validate_Alphabetic_True()
     {
         Patient name = new Patient();
-        boolean legalname = name.ValidateName("Patient");
+        boolean legalname = name.ValidateName("Patient"); 
         assertTrue(legalname);
     }
 }
