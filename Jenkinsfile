@@ -1,22 +1,14 @@
 pipeline {
   agent any
   stages {
-    stage('Fetch') {
-      steps{
-                cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
-                [[credentialsId: 'git-ssh-key', url: 'git@github.com:WillPeers/ENSE375-groupE.git']]]
-            }
-    }
     stage('Build') {
-      steps{
-        echo 'Building..'
+        sh 'mvn compile -f RiskMeter/pom.xml'
       }
     }
 
     stage('Test') {
       steps {
-        echo 'Testing..'
+        sh 'mvn test -f RiskMeter/pom.xml'
       }
     }
 
