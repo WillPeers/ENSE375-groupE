@@ -15,13 +15,13 @@ import com.uregina.exception.*;
  */
 public class RiskCodeMapTest 
 {
-    @Test
+    /*@Test
     public void riskIsNull() {
         RiskCodeMap map =  new RiskCodeMap();
         int VIndex = 1, HIndex = 1;
 
         assertEquals(map.getRiskInARegion(VIndex, HIndex), "");
-    }
+    }*/
 
     @Test
     public void riskIsGreen() {
