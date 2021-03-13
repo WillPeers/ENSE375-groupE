@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
 
-//import jdk.jfr.Timestamp;
+import jdk.jfr.Timestamp;
 
 /**
  * Unit test for simple PostalCode.
