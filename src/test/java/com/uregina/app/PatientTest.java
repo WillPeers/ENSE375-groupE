@@ -13,8 +13,11 @@ public class PatientTest
      * Rigorous Test :-)
      */
     @Test
-    public void shouldAnswerWithTrue()
+    public void Validate_Alphabetic_True()
     {
-        assertTrue( true );
+        Patient name = new Patient();
+        boolean legalname = name.ValidateName("Patient");
+        assertTrue(legalname);
+
     }
 }
