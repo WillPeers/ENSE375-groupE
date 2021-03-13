@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.Test;
 
-import jdk.jfr.Timestamp;
+//import jdk.jfr.Timestamp;
 
 /**
  * Unit test for simple PostalCode.
@@ -20,6 +20,17 @@ public class PostalCodeTest {
     /**
      * Rigorous Test :-)
      */
+
+    @Test
+    public void nullcheck() {
+        try {
+            PostalCode code = new PostalCode("");
+            assertEquals(code.getPostalCode(), "");
+        } catch (Exception e) {
+            //
+        }
+    }
+
     @Test
     public void shouldAnswerWithTrue() {
         assertTrue(true);
@@ -74,7 +85,7 @@ public class PostalCodeTest {
             assertFalse(code.isValidPostalCode(code.getPostalCode()));
         } catch (InvalidPostalCodeException e) {
             //
-        } catch (NumberFormatException e ) {
+        } catch (NumberFormatException e) {
 
         }
     }
@@ -87,7 +98,7 @@ public class PostalCodeTest {
         } catch (InvalidPostalCodeException e) {
             //
         } catch (NumberFormatException e) {
-            
+
         }
     }
 
