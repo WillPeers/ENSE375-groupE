@@ -34,22 +34,6 @@ public class PatientHistogramTest
         assertTrue(check);
     }
     
-    
-    /*
-     * It checks for the same horizontal and vertical values 
-     * If already exists, it should not add any patient, 
-     * If no patient exists, it will add
-     * Return True
-     */
-    @Test
-    public void should_NotAdd_False(){
-        PatientHistogram histogram = new PatientHistogram();
-        histogram.addAPatientToRegion(0,0);
-        int VIndex = 0, HIndex = 0;
-        boolean check=histogram.addAPatientToRegion(VIndex,HIndex);
-        assertFalse(check);
-    }
-    
     /*
      * Check for upper boundary cases:
      * I will try to add the value on 19:Vertical index and 9:Horizontal index
