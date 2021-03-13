@@ -3,6 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps{
+        git url: "https://github.com/WillPeers/ENSE375-groupE.git"
         sh 'mvn compile -f RiskMeter/pom.xml'
       } 
     }
