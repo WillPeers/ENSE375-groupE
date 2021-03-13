@@ -5,6 +5,7 @@ pipeline {
       steps{
         git url: 'https://github.com/WillPeers/ENSE375-groupE.git'
         withMaven {
+          sh "cd RiskMeter"
           sh "mvn clean verify"
         }
       }
