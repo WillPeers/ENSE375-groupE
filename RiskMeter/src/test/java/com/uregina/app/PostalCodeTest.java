@@ -74,6 +74,8 @@ public class PostalCodeTest {
             assertFalse(code.isValidPostalCode(code.getPostalCode()));
         } catch (InvalidPostalCodeException e) {
             //
+        } catch (NumberFormatException e ) {
+
         }
     }
 
@@ -84,6 +86,8 @@ public class PostalCodeTest {
             assertFalse(code.isValidPostalCode(code.getPostalCode()));
         } catch (InvalidPostalCodeException e) {
             //
+        } catch (NumberFormatException e) {
+            
         }
     }
 
@@ -114,7 +118,10 @@ public class PostalCodeTest {
             assertFalse(code.isValidPostalCode(code.getPostalCode()));
         } catch (InvalidPostalCodeException e) {
             // invalid throw
+        } catch (NumberFormatException e) {
+
         }
+
     }
 
     @Test

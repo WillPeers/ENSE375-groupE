@@ -19,10 +19,10 @@ public class PostalCode
 			if(postalCode.charAt(2) >= 'A' && postalCode.charAt(2) <= 'T')
 				vertIndex = true;
 			
-			if(Integer.parseInt(postalCode.substring(3, 4)) >= 0 && Integer.parseInt(postalCode.substring(3, 4)) <= 9)
+			if(Integer.parseInt(postalCode.substring(4, 5)) >= 0 && Integer.parseInt(postalCode.substring(4, 5)) <= 9)
 				horIndex = true;
 
-			if(postalCode.substring(4, 5).equals("-"))
+			if(postalCode.substring(3, 4).equals("-"))
 				checkDash = true;
 
 			if(postalCode.charAt(5) >= 'A' && postalCode.charAt(5) <= 'Z')
