@@ -4,8 +4,8 @@ pipeline {
     stage('Fetch') {
       steps{
                 cleanWs()
-                checkout scm: [$class: 'GitSCM', branches: [[name: '*/master']],userRemoteConfigs:
-                [[credentialsId: 'github-ssh-key', url: 'git@github.com:WillPeers/ENSE375-groupE.git']]]
+                checkout scm: [$class: 'GitSCM', branches: [[name: '*/main']],userRemoteConfigs:
+                [[credentialsId: 'git-ssh-key', url: 'git@github.com:WillPeers/ENSE375-groupE.git']]]
             }
     }
     stage('Build') {
