@@ -17,12 +17,8 @@ public class PatientHistogram
     	public boolean addAPatientToRegion(int VIndex,int HIndex)
     	{
     		try{
-				if (this.patientCount[VIndex][HIndex] == 0) {
-					this.patientCount[VIndex][HIndex] += 1;
-					return true;
-				}
-				else 
-					return false;
+				this.patientCount[VIndex][HIndex] += 1;
+				return true;
     		}
     		catch(Exception e) {
     			return false;
