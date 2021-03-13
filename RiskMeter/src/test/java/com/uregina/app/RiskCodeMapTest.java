@@ -29,8 +29,6 @@ public class RiskCodeMapTest
         PatientHistogram histogram = new PatientHistogram();
         int VIndex = 1, HIndex = 1;
 
-        histogram.addAPatientToRegion(VIndex,HIndex);
-
         ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
         for (int i=-1;i<=1;i+=2){
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
@@ -50,7 +48,9 @@ public class RiskCodeMapTest
         PatientHistogram histogram = new PatientHistogram();
         int VIndex = 1, HIndex = 1;
 
-        histogram.addAPatientToRegion(VIndex,HIndex);
+        for(int i = 0; i < 2; i++) {
+            histogram.addAPatientToRegion(VIndex,HIndex);
+        }
 
         ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
         for (int i=-1;i<=1;i+=2){

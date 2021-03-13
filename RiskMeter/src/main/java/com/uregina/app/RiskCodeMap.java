@@ -27,15 +27,15 @@ public class RiskCodeMap
 				value += i;
 			}
 
-			if (value == 0)
+			if (value + caseCount == 0)
 				this.riskCode[VIndex][HIndex] = 'G';
-			else if (value >= 0 && value < 3)
+			else if (value + caseCount >= 0 && value + caseCount < 3)
 				this.riskCode[VIndex][HIndex] = 'B';
-			else if (value >= 3 && value < 7)
+			else if (value + caseCount >= 3 && value + caseCount < 7)
 				this.riskCode[VIndex][HIndex] = 'Y';
-			else if (value >= 7 && value < 10)
+			else if (value + caseCount >= 7 && value + caseCount < 10)
 				this.riskCode[VIndex][HIndex] = 'O';
-			else if (value >= 10)
+			else if (value + caseCount >= 10)
 				this.riskCode[VIndex][HIndex] = 'R';
 
     		return true;
