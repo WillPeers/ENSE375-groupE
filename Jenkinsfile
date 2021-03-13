@@ -2,10 +2,12 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      git url: 'https://github.com/WillPeers/ENSE375-groupE.git'
-    withMaven {
-      sh "mvn clean verify"
-    }
+      steps{
+        git url: 'https://github.com/WillPeers/ENSE375-groupE.git'
+        withMaven {
+          sh "mvn clean verify"
+        }
+      }
     }
 
     stage('Test') {
