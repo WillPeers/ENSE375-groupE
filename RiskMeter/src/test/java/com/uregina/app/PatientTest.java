@@ -17,4 +17,29 @@ public class PatientTest
     {
         assertTrue(true);
     }
+
+    @Test
+    public void Validate_Alphabetic_True()
+    {
+
+
+    }
+
+    @Test
+    public void Validate_AlphabeticDots_True()
+    {
+
+    }
+
+    @Test
+    public void Validate_AlphabeticSpace_True()
+    {
+
+    }
+
+    @Test
+    public void Validate_AlphabeticDotsSpace_True()
+    {
+        
+    }
 }
