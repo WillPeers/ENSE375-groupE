@@ -4,6 +4,12 @@ import java.util.ArrayList;
 
 public class RiskCodeMap 
 {
+	//0 = Green if no risk
+	//(0:3] Blue, low risk
+	//(3:7] Yellow, general risk
+	//(7:10] Orange, significant risk
+	//(10:inf] Red, severe risk
+
 	private char[][] riskCode;
     	public RiskCodeMap() 
     	{
@@ -15,12 +21,6 @@ public class RiskCodeMap
 	*/
     	public boolean updateRiskInARegion(int VIndex,int HIndex,int caseCount,ArrayList<Integer> neighboursCaseCount)
     	{
-			//0 = Green if no risk
-			//(0:3] Blue, low risk
-			//(3:7] Yellow, general risk
-			//(7:10] Orange, significant risk
-			//(10:inf] Red, severe risk
-
 			int value = 0;
 
 			for(Integer i : neighboursCaseCount) {
