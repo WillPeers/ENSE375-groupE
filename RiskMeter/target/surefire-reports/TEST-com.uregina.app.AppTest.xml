@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-15.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\William\AppData\Local\Temp\surefire11486082387439150918\surefirebooter1254159846770620583.jar C:\Users\William\AppData\Local\Temp\surefire11486082387439150918 2021-03-13T12-40-56_987-jvmRun1 surefire16799614538955446515tmp surefire_014429275348697284189tmp"/>
+    <property name="sun.java.command" value="C:\Users\William\AppData\Local\Temp\surefire11826974943539196504\surefirebooter4947483360084441740.jar C:\Users\William\AppData\Local\Temp\surefire11826974943539196504 2021-03-13T13-33-29_794-jvmRun1 surefire18351859009978841093tmp surefire_03527992153964080127tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\dev\Git\ENSE375-groupE\RiskMeter\target\test-classes;C:\dev\Git\ENSE375-groupE\RiskMeter\target\classes;C:\Users\William\.m2\repository\org\junit\platform\junit-platform-console-standalone\1.7.0\junit-platform-console-standalone-1.7.0.jar;C:\Users\William\.m2\repository\org\junit\platform\junit-platform-surefire-provider\1.3.2\junit-platform-surefire-provider-1.3.2.jar;C:\Users\William\.m2\repository\org\apiguardian\apiguardian-api\1.0.0\apiguardian-api-1.0.0.jar;C:\Users\William\.m2\repository\org\junit\platform\junit-platform-launcher\1.3.2\junit-platform-launcher-1.3.2.jar;C:\Users\William\.m2\repository\org\junit\platform\junit-platform-engine\1.3.2\junit-platform-engine-1.3.2.jar;C:\Users\William\.m2\repository\org\junit\platform\junit-platform-commons\1.3.2\junit-platform-commons-1.3.2.jar;C:\Users\William\.m2\repository\org\opentest4j\opentest4j\1.1.1\opentest4j-1.1.1.jar;C:\Users\William\.m2\repository\org\apache\maven\surefire\surefire-api\2.22.0\surefire-api-2.22.0.jar;C:\Users\William\.m2\repository\org\apache\maven\surefire\surefire-logger-api\2.22.0\surefire-logger-api-2.22.0.jar;C:\Users\William\.m2\repository\org\apache\maven\surefire\common-java5\2.22.0\common-java5-2.22.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\William\AppData\Local\Temp\surefire11486082387439150918\surefirebooter1254159846770620583.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\William\AppData\Local\Temp\surefire11826974943539196504\surefirebooter4947483360084441740.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="15.0.2+7-27"/>
@@ -55,5 +55,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="59.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.uregina.app.AppTest" time="0"/>
+  <testcase name="shouldAnswerWithTrue" classname="com.uregina.app.AppTest" time="0.001"/>
 </testsuite>
