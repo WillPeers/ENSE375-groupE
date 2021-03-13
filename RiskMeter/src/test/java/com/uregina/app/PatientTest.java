@@ -9,14 +9,5 @@ import org.junit.Test;
  */
 public class PatientTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
-    @Test
-    public void Validate_Alphabetic_True()
-    {
-        Patient name = new Patient();
-        boolean legalname = name.ValidateName("Patient");
-        assertTrue(legalname);
-    }
+    
 }

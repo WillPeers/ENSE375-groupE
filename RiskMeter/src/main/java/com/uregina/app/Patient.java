@@ -1,8 +1,6 @@
 package com.uregina.app;
 import com.uregina.exception.*;
 import java.util.regex.*;
-
-
 public class Patient 
 {
 	private String name;
@@ -51,30 +49,4 @@ public class Patient
 		this.postalCode = postalCode;
 		return true;
 	}
-
-	public boolean ValidateName(String name)
-	{
-		if(name.matches("^[a-zA-Z]*$"))
-		{
-			return true;
-		}
-
-		else if (name.matches("[a-zA-Z][a-zA-Z ]+"))
-		{
-			return true;
-		
-		}
-		else if (name.matches("(?i)[a-z]+([.\\s]+[a-z]+)*"))
-		{
-			return true;
-		}
-		else
-		{
-			return false;
-		}
-	}
 }
-
-/*Reference
-https://www.geeksforgeeks.org/check-if-a-string-contains-only-alphabets-in-java-using-regex
-https://stackoverflow.com/questions/9289451/regular-expression-for-alphabets-with-spaces*/
