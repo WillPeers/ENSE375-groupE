@@ -52,6 +52,10 @@ public class RiskCodeMapTest
 
         histogram.addAPatientToRegion(VIndex,HIndex);
 
+        for(int i = 0; i < 2; i++) {
+            histogram.addAPatientToRegion(VIndex,HIndex);
+        }
+
         ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
         for (int i=-1;i<=1;i+=2){
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
@@ -76,10 +80,10 @@ public class RiskCodeMapTest
         }
 
         ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
-        for (int i=-1;i<=1;i+=2){
+        for (int i=0;i<=1;i+=2){
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
     	}
-    	for (int i=-1;i<=1;i+=2){
+    	for (int i=0;i<=1;i+=2){
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
     	}
         
