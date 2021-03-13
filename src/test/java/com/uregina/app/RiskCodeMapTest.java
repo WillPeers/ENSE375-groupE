@@ -20,7 +20,7 @@ public class RiskCodeMapTest
         RiskCodeMap map =  new RiskCodeMap();
         int VIndex = 1, HIndex = 1;
 
-        assertEquals(map.getRiskInARegion(VIndex, HIndex), null);
+        assertEquals(map.getRiskInARegion(VIndex, HIndex), "");
     }
 
     @Test
