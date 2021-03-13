@@ -18,6 +18,5 @@ public class PatientTest
         Patient name = new Patient();
         boolean legalname = name.ValidateName("Patient");
         assertTrue(legalname);
-
     }
 }
