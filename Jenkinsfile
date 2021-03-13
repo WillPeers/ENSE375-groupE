@@ -1,9 +1,11 @@
 pipeline {
   agent any
+  tools {
+    maven 'Maven 3.6.3'
+  }
   stages {
     stage('Build') {
       steps{
-        git url: "https://github.com/WillPeers/ENSE375-groupE.git"
         sh 'mvn compile -f RiskMeter/pom.xml'
       } 
     }
