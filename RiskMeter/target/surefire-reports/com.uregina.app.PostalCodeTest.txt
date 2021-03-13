@@ -1,0 +1,44 @@
+-------------------------------------------------------------------------------
+Test set: com.uregina.app.PostalCodeTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 1, Errors: 9, Skipped: 0, Time elapsed: 0.001 s <<< FAILURE! - in com.uregina.app.PostalCodeTest
+InvalidPostalCode_NoDash  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.StringIndexOutOfBoundsException: begin 6, end 7, length 6
+	at com.uregina.app.PostalCodeTest.InvalidPostalCode_NoDash(PostalCodeTest.java:84)
+
+ConstructorWorks  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <1> but was: <2>
+	at com.uregina.app.PostalCodeTest.ConstructorWorks(PostalCodeTest.java:130)
+
+InvalidPostalCode_XisNotLetter  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "-"
+	at com.uregina.app.PostalCodeTest.InvalidPostalCode_XisNotLetter(PostalCodeTest.java:104)
+
+ValidPostalCodeTrue  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "-"
+	at com.uregina.app.PostalCodeTest.ValidPostalCodeTrue(PostalCodeTest.java:32)
+
+InvalidPostalCode_VindexOutOfRange  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "-"
+	at com.uregina.app.PostalCodeTest.InvalidPostalCode_VindexOutOfRange(PostalCodeTest.java:54)
+
+InvalidPostalCode_YisNotInt  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "-"
+	at com.uregina.app.PostalCodeTest.InvalidPostalCode_YisNotInt(PostalCodeTest.java:114)
+
+InvalidPostalCode_HindexNotInt  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "-"
+	at com.uregina.app.PostalCodeTest.InvalidPostalCode_HindexNotInt(PostalCodeTest.java:74)
+
+InvalidPostalCode_VindexNotChar  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "-"
+	at com.uregina.app.PostalCodeTest.InvalidPostalCode_VindexNotChar(PostalCodeTest.java:64)
+
+InvalidPostalCode_XisNotUpper  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "-"
+	at com.uregina.app.PostalCodeTest.InvalidPostalCode_XisNotUpper(PostalCodeTest.java:94)
+
+InvalidPostalCode_BadPrefix  Time elapsed: 0 s  <<< ERROR!
+java.lang.NumberFormatException: For input string: "-"
+	at com.uregina.app.PostalCodeTest.InvalidPostalCode_BadPrefix(PostalCodeTest.java:43)
+
