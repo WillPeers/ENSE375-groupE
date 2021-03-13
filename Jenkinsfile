@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps{
-        git url: 'https://github.com/WillPeers/ENSE375-groupE.git'
+        git url: 'https://github.com/WillPeers/ENSE375-groupE'
         withMaven {
           sh "cd RiskMeter"
           sh "mvn clean verify"
