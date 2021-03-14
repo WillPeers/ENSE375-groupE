@@ -99,3 +99,14 @@ public class PatientTest
         
     } 
 }
+
+/*Referece:
+https://howtodoinjava.com/java/regex/start-end-of-string/
+https://regex101.com/
+https://www.geeksforgeeks.org/check-if-a-string-contains-only-alphabets-in-java-using-regex/
+https://stackoverflow.com/questions/9241651/java-string-should-contain-only-letters-and-dot
+https://stackoverflow.com/questions/9289451/regular-expression-for-alphabets-with-spaces
+https://www.jrebel.com/blog/java-regular-expressions-cheat-sheet
+https://www.tutorialspoint.com/java/java_string_matches.htm
+*/
+
