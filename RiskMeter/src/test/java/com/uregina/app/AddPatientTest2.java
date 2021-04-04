@@ -13,7 +13,10 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import org.junit.Before;
 import java.util.ArrayList;
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 /*
 Adding a patient information into the list.
 */
