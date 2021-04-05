@@ -61,9 +61,8 @@ public class SeleniumFileTest {
     public void loginTest(){
         System.setProperty("webdriver.chrome.driver","./lib/chromedriver.exe");
         System.setProperty("webdriver.gecko.driver","./lib/geckodriver.exe");
-        driver.get("https://opensource-demo.orangehrmlive.com");
         driver= new FirefoxDriver();
-
+        driver.get("https://opensource-demo.orangehrmlive.com");
         WebElement username=driver.findElement(By.id("txtUsername"));
         WebElement password=driver.findElement(By.id("txtPassword"));
         WebElement login=driver.findElement(By.id("btnLogin"));
