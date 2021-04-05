@@ -1,6 +1,7 @@
 pipeline {
   environment {
     registry = "WillPeers/ENSE375-groupE"
+    credentials = 'dockerhub_id'
     image = '';
   }
   agent any
@@ -31,7 +32,7 @@ pipeline {
     stage('Deploy') {
       steps {
         script {
-          docker.withRegistry('', 'dockerhub') {
+          docker.withRegistry('', credentials) {
             image.push()
           }
         }
