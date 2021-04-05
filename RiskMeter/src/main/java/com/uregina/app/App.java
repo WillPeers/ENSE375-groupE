@@ -149,26 +149,35 @@ public class App
     	if(patient==null)
     	{
     		System.out.println( "\tPatient Not Found" );
+			return false;
     	}
+
     	int HIndex=patient.getPostalCode().getRegionHorizontalIndex();
     	int VIndex=patient.getPostalCode().getRegionVerticalIndex();
+
     	if(!histogram.deleteAPatientFromRegion(VIndex,HIndex))
     	{
 	    	System.out.println( "\tFailed to update the patient Count" );
+			return false;
     	}
+
     	int caseCount=histogram.getPatientsCountInRegion(VIndex,HIndex);
     	ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
+
     	for (int i=-1;i<=1;i+=2){
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
     	}
+
     	for (int i=-1;i<=1;i+=2){
     		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
     	}
+
     	if(!riskCodeMap.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount))
     	{
     		System.out.println( "\tFailed to update the risk code map" );
     		return false;
     	}
+		
     	return true;
     }
     /**
