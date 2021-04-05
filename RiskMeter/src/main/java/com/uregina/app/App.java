@@ -198,7 +198,7 @@ public class App
     * @param patientAge 	an integer contains the age of the patient that should be added
     * @return boolean which is false if it failed
     */
-    public boolean addPatient(String patientName,String patientID,String patientpostalCode, int patientAge)
+	public boolean addPatient(String patientName,String patientID,String patientpostalCode, int patientAge)
     {
     	PostalCode postalCode=null;
     	try{
@@ -206,6 +206,8 @@ public class App
     	}
     	catch(InvalidPostalCodeException e){
     		System.out.println( "\tInvalid PostalCode" );
+
+			return false;
     	}
     	Patient patient=null;
     	try{
@@ -221,7 +223,7 @@ public class App
     	}
     	catch(InvalidIDException e){
     		System.out.println( "\tInvalid patient ID" );
-    		return true;
+    		return false;
     	}
     	catch(InvalidPostalCodeException e){
     		System.out.println( "\tInvalid patient ID" );
@@ -240,19 +242,55 @@ public class App
     		System.out.println( "\tFailed to assign  a patient to a region" );
     		return false;
     	}
-    	int caseCount=histogram.getPatientsCountInRegion(VIndex,HIndex);
-    	ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
-    	for (int i=-1;i<=1;i+=2){
-    		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+i,HIndex));
-    	}
-    	for (int i=-1;i<=1;i+=2){
-    		neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex,HIndex+i));
-    	}
-    	if(!riskCodeMap.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount))
+
+
+		for( int h =1; h <=1; h++){
+			for(int v=-1; v<=1; v++){
+
+				int Vadd= VIndex + v;
+				int Hadd= HIndex + h;
+				
+				if(Vadd<20 && Vadd>=0 && Hadd<10 && Hadd>=0){
+					if(!Neighbours(Vadd, Hadd)){
+						System.out.println("\tFailed to add patient");
+						
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
+
+
+	public boolean Neighbours(int VIndex, int HIndex) {
+		
+		ArrayList<Integer> neighboursCaseCount= new ArrayList<Integer> ();
+		for( int h =-1; h <=1; h++){
+			neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+h,HIndex));
+			
+			for(int v=-1; v<=1; v++){
+
+				int Vadd= VIndex + v;
+				int Hadd= HIndex + h;
+
+				if(Vadd<20 && Vadd>=0 && Hadd<10 && Hadd>=0 && !(v==0 && h==0)){
+					neighboursCaseCount.add(histogram.getPatientsCountInRegion(VIndex+v,HIndex));
+	
+				}
+				
+			}
+			
+		}
+		int caseCount=histogram.getPatientsCountInRegion(VIndex,HIndex);
+		if(!riskCodeMap.updateRiskInARegion(VIndex,HIndex,caseCount,neighboursCaseCount))
     	{
     		System.out.println( "\tFailed to update the risk code map" );
     		return false;
     	}
     	return true;
     }
+
+
 }
+
