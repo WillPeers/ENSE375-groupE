@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    registry = "WillPeers/ENSE375-groupE"
+    registry = "willpeers/ense375-groupe"
     credentials = 'dockerhub_id'
     image = '';
   }
