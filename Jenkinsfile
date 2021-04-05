@@ -1,4 +1,8 @@
 pipeline {
+  environment {
+    registry = "WillPeers/ENSE375-groupE"
+    image = '';
+  }
   agent any
   tools {
     maven 'Maven 3.6.3'
@@ -16,9 +20,21 @@ pipeline {
       }
     }
 
+    stage('Docker Build') {
+      steps {
+        script {
+          image = docker.build registry
+        }
+      }
+    }
+
     stage('Deploy') {
       steps {
-        echo 'Deploying....'
+        script {
+          docker.withRegistry('', 'dockerhub') {
+            image.push()
+          }
+        }
       }
     }
 
