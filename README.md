@@ -5,7 +5,7 @@
 * William Peers: RiskCodeMap and PostalCode tests
 * Alish Kadiwal: PatientHistogram and PostalCode tests
 * Philip Anyuon: PatientList tests
-* Ria Chevli
+* Ria Chevli: addPatient implementation
 * Dhruv Modi: Patient tests
 
 To view `Mermaid` graph: install extensions for firefox from https://addons.mozilla.org/en-US/firefox/addon/github-mermaid/?src=recommended
