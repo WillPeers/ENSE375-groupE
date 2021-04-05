@@ -2,6 +2,15 @@
 
 ## Members
 
+### Activity 4
+
+* William Peers: Fixed deletePatient implementation
+* Alish Kadiwal: addPatient tests
+* Philip Anyuon: addPatient tests
+* Ria Chevli: Fixed addPatient implementation
+* Dhruv Modi: deletePatient test
+### Activity 3
+
 * William Peers: RiskCodeMap and PostalCode tests
 * Alish Kadiwal: PatientHistogram and PostalCode tests
 * Philip Anyuon: PatientList tests
