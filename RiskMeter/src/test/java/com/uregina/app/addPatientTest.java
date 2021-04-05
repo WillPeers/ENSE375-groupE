@@ -21,14 +21,13 @@ public class addPatientTest
         Patient patienttest = new Patient(Name, ID,Age, postalcode);
         PatientList addpatient = new PatientList();
         boolean Legaladdpatient = addpatient.addPatient(patienttest);
-        boolean Illegaladdpatient = false;
         if ((Name != "") && (ID != "") && (Age != 0) && (CodePostal != ""))
         {
             assertTrue(Legaladdpatient);      
         }
         else
         {
-            Legaladdpatient = Illegaladdpatient;
+            Legaladdpatient = false;
             assertTrue(Legaladdpatient);
         }
     }
@@ -45,15 +44,13 @@ public class addPatientTest
         Patient patienttest = new Patient(Name, ID,Age, postalcode);
         PatientList addpatient = new PatientList();
         boolean Legaladdpatient = addpatient.addPatient(patienttest);
-        boolean Illegaladdpatient = false;
-        System.out.println(Legaladdpatient);
         if ((Name != "") && (ID != "") && (Age != 0) && (CodePostal != ""))
         {
             assertFalse(Legaladdpatient);      
         }
         else
         {
-            Legaladdpatient = Illegaladdpatient;
+            Legaladdpatient = false;
             assertFalse(Legaladdpatient);
         }
     }
