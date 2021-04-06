@@ -13,10 +13,6 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import org.junit.Before;
 import java.util.ArrayList;
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 /*
 Adding a patient information into the list.
 */
@@ -26,95 +22,95 @@ public class AddPatientTest2 {
 	
 	@Before
 	public void addPatient(){
-		list = new ArrayList<String>();
+		this.list = new ArrayList<String>();
 	}
 	//Check if the list is empty
 	@Test
 	public void testListInit(){
-		assertTrue(list.isEmpty());
-		assertTrue(list.size() == 0);
+		assertTrue(this.list.isEmpty());
+		assertTrue(this.list.size() == 0);
 	}
 	
 	@Test (expected = IllegalArgumentException.class)
 	public void testInvalidCapacity(){
-		list = new ArrayList<String>(-1);
+		this.list = new ArrayList<String>(-1);
 	}
 	//Add a patient into index 0 in the list
     //List size equal 1
 	@Test
 	public void testAddPatient(){
-		list.add(0, "Patient");
-		assertEquals("Patient", list.get(0));
-		assertTrue(list.size() == 1);
+		this.list.add(0, "Patient");
+		assertEquals("Patient", this.list.get(0));
+		assertTrue(this.list.size() == 1);
 	}
 	
 	//Add patient's first name in the index 0
     //assert false if list is empty
 	@Test
 	public void addPatientFirstName(){
-		list.add(0, "firstName");
-		assertFalse(list.isEmpty());
-		assertEquals(1, list.size());
+		this.list.add(0, "firstName");
+		assertFalse(this.list.isEmpty());
+		assertEquals(1, this.list.size());
 	}
 
 	//Add patient's last name in the index 0
     //assert false if list is empty
 	@Test
 	public void addPatientLastName(){
-		list.add(0, "lastName");
-		assertFalse(list.isEmpty());
-		assertEquals(1, list.size());
+		this.list.add(0, "lastName");
+		assertFalse(this.list.isEmpty());
+		assertEquals(1, this.list.size());
 	}
 	//Add patient's age in the index 0
     //assert false if list is empty
 	@Test		
     public void addPatientAge() {					
-        list.add(0, "Age");					
-        assertFalse(list.isEmpty());			
-        assertEquals(1, list.size());			
+        this.list.add(0, "Age");					
+        assertFalse(this.list.isEmpty());			
+        assertEquals(1, this.list.size());			
     }	
 
 	//Add patient's address in the index 0
     //assert false if list is empty
 	@Test
 	public void addPatientAddress(){
-		list.add(0, "Address");
-		assertFalse(list.isEmpty());
-		assertEquals(1, list.size());
+		this.list.add(0, "Address");
+		assertFalse(this.list.isEmpty());
+		assertEquals(1, this.list.size());
 	}
 	//Add patient's postal Code in the index 0
     //assert false if list is empty
 	@Test
 	public void addPostalCode(){
-		list.add(0, "PostalCode");
-		assertFalse(list.isEmpty());
-		assertEquals(1, list.size());
+		this.list.add(0, "PostalCode");
+		assertFalse(this.list.isEmpty());
+		assertEquals(1, this.list.size());
 	}
 
 	//Add patient's Health Card in the index 0
     //assert false if list is empty
 	@Test
 	public void addHealthCard(){
-		list.add(0, "HealthCard");
-		assertFalse(list.isEmpty());
-		assertEquals(1, list.size());
+		this.list.add(0, "HealthCard");
+		assertFalse(this.list.isEmpty());
+		assertEquals(1, this.list.size());
 	}
 
     //Add patient's City of resident in the index 0
     //assert false if list is empty
 	@Test
 	public void addCity(){
-		list.add(0, "City");
-		assertFalse(list.isEmpty());
-		assertEquals(1, list.size());
+		this.list.add(0, "City");
+		assertFalse(this.list.isEmpty());
+		assertEquals(1, this.list.size());
 	}
 	//Add patient's Cell Phone in the index 0
     //assert false if list is empty
 	@Test
 	public void addCell(){
-		list.add(0, "cellPhone");
-		assertFalse(list.isEmpty());
-		assertEquals(1, list.size());
+		this.list.add(0, "cellPhone");
+		assertFalse(this.list.isEmpty());
+		assertEquals(1, this.list.size());
 	}
 
 }

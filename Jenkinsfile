@@ -1,4 +1,9 @@
 pipeline {
+  environment {
+    registry = "billpeers/ense375-groupe"
+    credentials = 'dockerhub_id'
+    image = '';
+  }
   agent any
   tools {
     maven 'Maven 3.6.3'
@@ -16,9 +21,21 @@ pipeline {
       }
     }
 
+    stage('Docker Build') {
+      steps {
+        script {
+          image = docker.build registry
+        }
+      }
+    }
+
     stage('Deploy') {
       steps {
-        echo 'Deploying....'
+        script {
+          docker.withRegistry('', credentials) {
+            image.push()
+          }
+        }
       }
     }
 
